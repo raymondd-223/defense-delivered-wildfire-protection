@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Defense Delivered | Wildfire Defense System for Colorado Homes</title>
+  <meta name="description" content="Protect your home with the AquaPulse360 automated exterior sprinkler system and certified home hardening from Defense Delivered, Summit County's first wildfire hardening company. Get a free wildfire assessment.">
+  <meta name="theme-color" content="#12293F">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta property="og:site_name" content="Defense Delivered">
+  <meta property="og:title" content="Defense Delivered | Wildfire Defense System">
+  <meta property="og:description" content="Automated exterior wildfire sprinkler systems and certified home hardening. Wet homes don't burn.">
+  <meta property="og:image" content="assets/hero-poster.jpg">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/hero-poster.jpg">
+  <style>
+    /* ---------- Tokens ---------- */
+    :root {
+      --navy: #12293F;
+      --navy-deep: #0B1E30;
+      --navy-soft: #1B3A57;
+      --cream: #F2E6D0;
+      --cream-2: #F8F1E3;
+      --sand: #DCCBA8;
+      --white: #FFFFFF;
+      --orange: #EA882F;
+      --orange-hover: #F39A48;
+      --orange-text: #9E4A08;
+      --sky: #70C8F3;
+      --sky-text: #1F6E9C;
+      --ink: #1B1F24;
+      --grey: #4A5561;
+      --taupe: #9B8E7A;
+      --error: #A0261B;
+      --header-h: 76px;
+      --font-display: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+      --font-body: "Barlow", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --radius: 4px;
+      --container: 1240px;
+      --gutter: clamp(16px, 4vw, 40px);
+      --section-pad: clamp(4rem, 9vw, 7.5rem);
+    }
+
+    /* Section themes */
+    .theme-cream { --bg: var(--cream); --fg: var(--navy); --muted: var(--grey); --accent: var(--orange-text); --accent-2: var(--sky-text); --rule: var(--sand); --surface: var(--white); }
+    .theme-light { --bg: var(--cream-2); --fg: var(--navy); --muted: var(--grey); --accent: var(--orange-text); --accent-2: var(--sky-text); --rule: var(--sand); --surface: var(--white); }
+    .theme-white { --bg: var(--white); --fg: var(--navy); --muted: var(--grey); --accent: var(--orange-text); --accent-2: var(--sky-text); --rule: #E3DBCB; --surface: var(--cream-2); }
+    .theme-navy { --bg: var(--navy); --fg: var(--cream); --muted: #C9D3DD; --accent: var(--orange); --accent-2: var(--sky); --rule: rgba(242, 230, 208, 0.18); --surface: var(--navy-soft); }
+    .theme-deep { --bg: var(--navy-deep); --fg: var(--cream); --muted: #C9D3DD; --accent: var(--orange); --accent-2: var(--sky); --rule: rgba(242, 230, 208, 0.16); --surface: var(--navy); }
+
+    /* ---------- Base ---------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 1rem); -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      color: var(--navy);
+      background: var(--cream);
+      overflow-wrap: break-word;
+      overflow-x: clip;
+    }
+    html { overflow-x: clip; }
+    body.nav-open { overflow: hidden; }
+    img, video { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; }
+    a:hover { text-decoration-thickness: 2px; }
+    h1, h2, h3, h4 { margin: 0; font-family: var(--font-display); font-weight: 700; line-height: 1.02; letter-spacing: -0.01em; }
+    h1 { font-size: clamp(2.9rem, 7.5vw, 6.25rem); }
+    h2 { font-size: clamp(2.35rem, 4.6vw, 3.9rem); }
+    h3 { font-size: clamp(1.55rem, 2.4vw, 2.1rem); font-weight: 600; line-height: 1.1; }
+    h4, h3.sub { font-family: var(--font-body); font-size: 1.2rem; font-weight: 600; line-height: 1.3; letter-spacing: 0; }
+    p, ul, ol { margin: 0 0 1.1rem; }
+    p:last-child, ul:last-child, ol:last-child { margin-bottom: 0; }
+    ul, ol { padding-left: 1.25rem; }
+    li + li { margin-top: 0.4rem; }
+    strong { font-weight: 600; }
+    small { font-size: 0.9rem; }
+    :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 2px; }
+    .theme-cream :focus-visible, .theme-light :focus-visible, .theme-white :focus-visible, .site-header :focus-visible { outline-color: var(--navy); }
+    .visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+    .skip-link {
+      position: absolute; left: 1rem; top: -100px; z-index: 100;
+      background: var(--navy); color: var(--cream); padding: 0.75rem 1.25rem; border-radius: var(--radius);
+      font-weight: 600; text-decoration: none;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    .container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+    .section { background: var(--bg); color: var(--fg); padding-block: var(--section-pad); }
+    .section-head { display: grid; gap: 1.25rem; margin-bottom: clamp(2.5rem, 5vw, 4rem); max-width: 60rem; }
+    .section-head.is-wide { max-width: none; }
+    .eyebrow { font-family: var(--font-body); font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin: 0 0 0.5rem; }
+    .lead { font-size: clamp(1.15rem, 1.6vw, 1.35rem); line-height: 1.55; color: var(--muted); max-width: 44rem; }
+    .muted { color: var(--muted); }
+    .rule { border: 0; border-top: 1px solid var(--rule); margin: clamp(2.5rem, 5vw, 4rem) 0; }
+    .num { font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; letter-spacing: 0.08em; color: var(--accent-2); }
+    .num::after { content: ""; display: inline-block; width: 2.5rem; height: 1px; background: currentColor; vertical-align: middle; margin-left: 0.75rem; opacity: 0.8; }
+
+    .grid-2 { display: grid; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+    .grid-3 { display: grid; gap: clamp(2rem, 4vw, 3rem); }
+    @media (min-width: 880px) {
+      .grid-2 { grid-template-columns: 1fr 1fr; }
+      .grid-2.is-wide-media { grid-template-columns: 1.15fr 1fr; }
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    figure { margin: 0; }
+    figcaption { font-size: 0.9rem; color: var(--muted); margin-top: 0.65rem; line-height: 1.45; }
+    .photo { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); }
+    .photo-frame { border-radius: var(--radius); overflow: hidden; background: var(--surface); }
+    .ratio-4-3 { aspect-ratio: 4 / 3; }
+    .ratio-3-4 { aspect-ratio: 3 / 4; }
+    .ratio-1-1 { aspect-ratio: 1 / 1; }
+    .ratio-16-9 { aspect-ratio: 16 / 9; }
+    .ratio-4-5 { aspect-ratio: 4 / 5; }
+    .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* ---------- Buttons ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
+      min-height: 50px; padding: 0.85rem 1.5rem;
+      font: 600 1rem/1.2 var(--font-body); letter-spacing: 0.01em;
+      border-radius: var(--radius); border: 2px solid transparent;
+      text-decoration: none; cursor: pointer; transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+    }
+    .btn svg { width: 20px; height: 20px; flex: none; }
+    .btn-primary { background: var(--orange); color: var(--navy-deep); border-color: var(--orange); }
+    .btn-primary:hover { background: var(--orange-hover); border-color: var(--orange-hover); }
+    .btn-outline { background: transparent; color: inherit; border-color: currentColor; }
+    .btn-outline:hover { background: rgba(255, 255, 255, 0.12); }
+    .theme-cream .btn-outline:hover, .theme-light .btn-outline:hover, .theme-white .btn-outline:hover { background: rgba(18, 41, 63, 0.08); }
+    .btn-navy { background: var(--navy); color: var(--cream); border-color: var(--navy); }
+    .btn-navy:hover { background: var(--navy-soft); border-color: var(--navy-soft); }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 0.9rem; }
+    .text-link { display: inline-flex; align-items: center; gap: 0.45rem; font-weight: 600; text-decoration: underline; text-underline-offset: 0.2em; }
+    .text-link svg { width: 18px; height: 18px; }
+
+    /* ---------- Icons ---------- */
+    .icon { width: 56px; height: 56px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+    .feature { display: grid; grid-template-columns: 56px 1fr; gap: 1.25rem; align-items: start; }
+    .feature .icon { color: var(--accent-2); margin-top: 0.1rem; }
+    .feature h4, .feature h3 { margin-bottom: 0.3rem; }
+    .feature p { color: var(--muted); margin: 0; }
+    .feature-list { display: grid; gap: 2rem; }
+    @media (min-width: 700px) { .feature-list.is-2col { grid-template-columns: 1fr 1fr; gap: 2.25rem 2.5rem; } }
+    .check-list { list-style: none; padding: 0; display: grid; gap: 0.9rem; }
+    .check-list li { display: grid; grid-template-columns: 32px 1fr; gap: 0.9rem; align-items: start; }
+    .check-list .icon { width: 32px; height: 32px; color: var(--accent-2); stroke-width: 2; margin-top: 0.1rem; }
+
+    /* ---------- Header ---------- */
+    .site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      height: var(--header-h); background: var(--cream); color: var(--navy);
+      border-bottom: 1px solid rgba(18, 41, 63, 0.12);
+      transition: box-shadow 0.2s ease;
+    }
+    .site-header.is-scrolled { box-shadow: 0 6px 24px rgba(11, 30, 48, 0.12); }
+    .header-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+    .brand { display: inline-flex; align-items: center; min-height: 48px; }
+    .brand img { height: 46px; width: auto; }
+    .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 0.25rem; }
+    .site-nav ul a { display: inline-flex; align-items: center; min-height: 44px; padding: 0.5rem 0.65rem; font-weight: 600; font-size: 0.92rem; white-space: nowrap; text-decoration: none; border-bottom: 2px solid transparent; border-radius: 2px; }
+    .site-nav ul a:hover { border-bottom-color: var(--orange); }
+    .header-actions { display: flex; align-items: center; gap: 0.75rem; }
+    .header-phone { display: none; align-items: center; gap: 0.5rem; font-weight: 600; text-decoration: none; min-height: 44px; padding: 0.5rem 0.25rem; }
+    .header-phone svg { width: 20px; height: 20px; }
+    .header-phone:hover { text-decoration: underline; }
+    .header-cta { min-height: 44px; padding: 0.6rem 1.1rem; }
+    .nav-toggle {
+      display: none; align-items: center; gap: 0.6rem; min-height: 44px; padding: 0.5rem 0.75rem;
+      background: transparent; border: 2px solid var(--navy); border-radius: var(--radius);
+      font: 600 0.95rem var(--font-body); color: var(--navy); cursor: pointer;
+    }
+    .nav-toggle svg { width: 22px; height: 22px; }
+    .nav-toggle[aria-expanded="true"] .i-menu { display: none; }
+    .nav-toggle[aria-expanded="false"] .i-close { display: none; }
+    @media (min-width: 1540px) { .header-phone { display: inline-flex; } }
+    @media (max-width: 1279px) {
+      .nav-toggle { display: inline-flex; }
+      .site-nav {
+        position: fixed; top: var(--header-h); left: 0; right: 0; bottom: 0;
+        background: var(--cream); display: none; overflow-y: auto;
+        padding: 1.5rem var(--gutter) 3rem; border-top: 1px solid rgba(18, 41, 63, 0.12);
+      }
+      .site-nav.is-open { display: block; }
+      .site-nav ul { flex-direction: column; align-items: stretch; gap: 0; }
+      .site-nav li { border-bottom: 1px solid rgba(18, 41, 63, 0.12); }
+      .site-nav ul a { width: 100%; min-height: 56px; font-size: 1.25rem; font-family: var(--font-display); font-weight: 600; padding: 0.75rem 0; border-bottom: 0; white-space: normal; }
+      .site-nav ul a:hover { color: var(--orange-text); }
+      .nav-extra { display: grid; gap: 1rem; margin-top: 1.5rem; }
+      .nav-extra .btn { width: 100%; white-space: normal; text-align: center; }
+      .header-cta { display: none; }
+    }
+    @media (min-width: 1280px) { .nav-extra { display: none; } }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative; isolation: isolate; overflow: hidden;
+      min-height: 100vh; min-height: 100svh;
+      display: grid; place-items: center;
+      padding: calc(var(--header-h) + 2.5rem) var(--gutter) 5.5rem;
+      background: var(--navy-deep); color: var(--cream);
+    }
+    .hero-media { position: absolute; inset: 0; z-index: -2; background: var(--navy-deep); }
+    .hero-media video, .hero-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .hero-media video { z-index: 1; }
+    .hero-scrim { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(11, 30, 48, 0.66) 0%, rgba(11, 30, 48, 0.48) 45%, rgba(11, 30, 48, 0.78) 100%); }
+    .hero-content { width: 100%; max-width: 58rem; margin-inline: auto; text-align: center; display: grid; justify-items: center; gap: 1.5rem; }
+    .hero .eyebrow { color: var(--sky); margin: 0; }
+    .hero h1 { color: var(--white); text-wrap: balance; text-shadow: 0 2px 24px rgba(11, 30, 48, 0.45); }
+    .hero .lead { color: var(--cream); max-width: 40rem; text-shadow: 0 1px 12px rgba(11, 30, 48, 0.5); }
+    .hero .btn-row { justify-content: center; }
+    .hero-note { font-size: 0.95rem; color: #D9E1E8; margin: 0; }
+    .hero-control {
+      position: absolute; right: var(--gutter); bottom: 1.5rem; z-index: 2;
+      display: inline-flex; align-items: center; gap: 0.5rem; min-height: 44px; padding: 0.55rem 0.9rem;
+      background: rgba(11, 30, 48, 0.72); color: var(--cream); border: 1px solid rgba(242, 230, 208, 0.4);
+      border-radius: var(--radius); font: 600 0.875rem var(--font-body); cursor: pointer;
+    }
+    .hero-control svg { width: 18px; height: 18px; }
+    .hero-control:hover { background: rgba(11, 30, 48, 0.92); }
+
+    /* ---------- Stats ---------- */
+    .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 2.5rem; margin-top: clamp(3rem, 6vw, 5rem); }
+    @media (min-width: 880px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+    .stat { border-top: 2px solid var(--fg); padding-top: 1.1rem; }
+    .stat-value { font-family: var(--font-display); font-weight: 700; font-size: clamp(3rem, 6vw, 4.75rem); line-height: 1; color: var(--fg); }
+    .stat-value span { font-size: 0.5em; vertical-align: top; }
+    .stat-label { margin-top: 0.4rem; font-weight: 600; }
+    .stat-source { color: var(--muted); font-size: 0.9rem; margin-top: 0.2rem; }
+
+    /* ---------- Embeds and video ---------- */
+    .video-frame { position: relative; aspect-ratio: 16 / 9; background: #000; border-radius: var(--radius); overflow: hidden; }
+    .video-frame video { width: 100%; height: 100%; }
+    .video-vertical { aspect-ratio: 9 / 16; max-width: 340px; width: 100%; }
+    .embed { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: var(--radius); background: #000; display: block; }
+    .embed-grid { display: grid; gap: 1.5rem; }
+    @media (min-width: 700px) { .embed-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1000px) { .embed-grid.is-4 { grid-template-columns: repeat(4, 1fr); } }
+    .embed-grid h4 { margin-top: 0.75rem; font-size: 1.05rem; }
+    .embed-grid p { font-size: 0.95rem; color: var(--muted); }
+
+    /* ---------- Steps ---------- */
+    .step { display: grid; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; padding-block: clamp(2.5rem, 5vw, 4rem); border-top: 1px solid var(--rule); }
+    .step:first-of-type { border-top: 0; padding-top: 0; }
+    .step-num { font-family: var(--font-display); font-weight: 700; font-size: clamp(3.5rem, 8vw, 6rem); line-height: 0.9; color: var(--accent); }
+    .step h3 { font-size: clamp(1.9rem, 3.2vw, 2.75rem); margin: 0.75rem 0 0.35rem; font-weight: 700; }
+    .step-kicker { font-weight: 600; color: var(--accent-2); font-size: 1.1rem; margin-bottom: 1rem; }
+    .step-media { display: grid; gap: 1rem; }
+    .step-media.is-pair { grid-template-columns: 1.4fr 1fr; align-items: end; }
+    @media (min-width: 880px) {
+      .step { grid-template-columns: 1fr 1fr; }
+      .step:nth-of-type(even) .step-media { order: 2; }
+    }
+
+    /* ---------- App section ---------- */
+    .phones { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: start; }
+    .phones img { width: 100%; height: auto; border-radius: var(--radius); }
+    .phones img:last-child { margin-top: 3rem; }
+
+    /* ---------- Quote ---------- */
+    .quote { border-left: 3px solid var(--accent); padding: 0.5rem 0 0.5rem 1.5rem; margin: 0; }
+    .quote p { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.5rem, 2.6vw, 2.2rem); line-height: 1.15; }
+    .quote footer { margin-top: 0.9rem; color: var(--muted); font-size: 0.95rem; }
+
+    /* ---------- Tables ---------- */
+    .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    table { width: 100%; border-collapse: collapse; font-size: 1rem; min-width: 560px; }
+    caption { text-align: left; font-weight: 600; padding-bottom: 0.9rem; color: var(--muted); caption-side: top; }
+    th, td { text-align: left; padding: 0.95rem 1rem 0.95rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+    th { font-weight: 600; }
+    thead th { font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border-bottom: 2px solid var(--fg); }
+    td.figure, th.figure { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; white-space: nowrap; }
+
+    /* ---------- Who we protect ---------- */
+    .segments { display: grid; gap: clamp(2.5rem, 5vw, 4rem); }
+    .segment { display: grid; gap: 1.5rem; align-content: start; }
+    .segment h3 { margin-top: 0.75rem; }
+    .segment .check-list { margin-top: 0.5rem; }
+    @media (min-width: 880px) { .segments { grid-template-columns: repeat(3, 1fr); } }
+    .mosaic { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .mosaic .photo-frame { aspect-ratio: 1 / 1; }
+
+    /* ---------- Timeline ---------- */
+    .timeline { list-style: none; padding: 0; margin: 0; counter-reset: tl; display: grid; gap: 0; }
+    .timeline li { counter-increment: tl; display: grid; grid-template-columns: 3.5rem 1fr; gap: 1rem; padding: 1.25rem 0; border-top: 1px solid var(--rule); }
+    .timeline li::before { content: counter(tl, decimal-leading-zero); font-family: var(--font-display); font-weight: 700; font-size: 1.75rem; line-height: 1; color: var(--accent); }
+    .timeline h4 { margin-bottom: 0.25rem; }
+    .timeline p { color: var(--muted); margin: 0; }
+
+    /* ---------- Team ---------- */
+    .team { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem 1.5rem; }
+    @media (min-width: 700px) { .team { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 1000px) { .team { grid-template-columns: repeat(4, 1fr); } }
+    .team figure { display: grid; gap: 0.75rem; }
+    .team .photo-frame { aspect-ratio: 4 / 5; background: var(--navy-soft); }
+    .team figcaption { color: inherit; margin: 0; }
+    .team .name { font-family: var(--font-display); font-weight: 600; font-size: 1.35rem; line-height: 1.1; display: block; }
+    .team .role { color: var(--muted); font-size: 0.95rem; display: block; margin-top: 0.15rem; }
+    .team details { margin-top: 0.35rem; }
+    .team summary { cursor: pointer; font-weight: 600; font-size: 0.95rem; color: var(--accent-2); min-height: 32px; display: inline-flex; align-items: center; }
+    .team details p { font-size: 0.95rem; color: var(--muted); margin-top: 0.5rem; }
+
+    /* ---------- FAQ ---------- */
+    .faq-group h3 { margin-bottom: 1rem; }
+    .faq details { border-top: 1px solid var(--rule); }
+    .faq details:last-child { border-bottom: 1px solid var(--rule); }
+    .faq summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; padding: 1.15rem 0; font-weight: 600; font-size: 1.12rem; line-height: 1.35; cursor: pointer; min-height: 44px; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary .icon { width: 28px; height: 28px; stroke-width: 2; color: var(--accent-2); transition: transform 0.2s ease; }
+    .faq details[open] summary .icon { transform: rotate(45deg); }
+    .faq details > div { padding: 0 0 1.35rem; color: var(--muted); max-width: 62rem; }
+    .faq details > div ul { margin-top: 0.5rem; }
+
+    /* ---------- Form ---------- */
+    .form-card { background: var(--surface); color: var(--navy); padding: clamp(1.5rem, 3vw, 2.5rem); border-radius: 6px; }
+    .theme-navy .form-card { background: var(--cream-2); }
+    .form-field { display: grid; gap: 0.4rem; margin-bottom: 1.15rem; }
+    .form-field label { font-weight: 600; }
+    .form-field .hint { font-size: 0.92rem; color: var(--grey); }
+    .form-field input, .form-field textarea {
+      width: 100%; font: inherit; padding: 0.85rem 1rem; min-height: 50px;
+      border: 1.5px solid #B9AC90; border-radius: var(--radius); background: var(--white); color: var(--ink);
+    }
+    .form-field textarea { min-height: 120px; resize: vertical; }
+    .form-field input[aria-invalid="true"], .form-field textarea[aria-invalid="true"] { border-color: var(--error); border-width: 2px; }
+    .form-error { color: var(--error); font-size: 0.95rem; font-weight: 600; min-height: 0; }
+    .form-error:empty { display: none; }
+    .form-row { display: grid; gap: 0 1.25rem; }
+    @media (min-width: 600px) { .form-row { grid-template-columns: 1fr 1fr; } }
+    .form-consent { display: grid; grid-template-columns: 24px 1fr; gap: 0.75rem; align-items: start; margin: 0.25rem 0 1.5rem; font-size: 0.95rem; color: var(--grey); }
+    .form-consent input { width: 24px; height: 24px; margin: 0.15rem 0 0; accent-color: var(--navy); }
+    .form-status { font-weight: 600; color: var(--error); margin-top: 1rem; }
+    .form-status:empty { display: none; }
+    .form-success { background: var(--surface); color: var(--navy); padding: clamp(1.5rem, 3vw, 2.5rem); border-radius: 6px; border-left: 4px solid var(--orange); }
+    .theme-navy .form-success { background: var(--cream-2); }
+    .form-success h3 { margin-bottom: 0.75rem; }
+    .contact-lines { display: grid; gap: 1rem; margin-top: 2rem; }
+    .contact-line { display: grid; grid-template-columns: 40px 1fr; gap: 1rem; align-items: center; }
+    .contact-line .icon { width: 40px; height: 40px; color: var(--accent-2); }
+    .contact-line a { font-weight: 600; font-size: 1.15rem; text-decoration: none; }
+    .contact-line a:hover { text-decoration: underline; }
+    .contact-line span { display: block; font-size: 0.9rem; color: var(--muted); }
+
+    /* ---------- Footer ---------- */
+    .site-footer { background: var(--navy-deep); color: var(--cream); padding: clamp(3.5rem, 7vw, 5.5rem) 0 2rem; }
+    .footer-grid { display: grid; gap: 2.5rem; }
+    @media (min-width: 700px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1000px) { .footer-grid { grid-template-columns: 1.6fr 1fr 1fr 1.2fr; } }
+    .footer-brand img { width: 108px; height: 108px; }
+    .footer-brand p { color: #C9D3DD; margin-top: 1.25rem; max-width: 30rem; }
+    .site-footer h3.sub { font-family: var(--font-display); font-size: 1.15rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sky); margin-bottom: 1rem; }
+    .site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.35rem; }
+    .site-footer li + li { margin: 0; }
+    .site-footer a { color: var(--cream); text-decoration: none; display: inline-flex; align-items: center; gap: 0.45rem; min-height: 36px; }
+    .site-footer a:hover { text-decoration: underline; }
+    .site-footer a svg { width: 18px; height: 18px; }
+    .footer-contact strong { display: block; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: #C9D3DD; margin-top: 1rem; }
+    .footer-contact strong:first-child { margin-top: 0; }
+    .footer-contact a { font-size: 1.15rem; font-weight: 600; }
+    .footer-bottom { margin-top: clamp(2.5rem, 5vw, 4rem); padding-top: 1.5rem; border-top: 1px solid rgba(242, 230, 208, 0.16); display: flex; flex-wrap: wrap; gap: 0.75rem 2rem; align-items: center; justify-content: space-between; font-size: 0.92rem; color: #C9D3DD; }
+    .footer-bottom ul { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
+    .footer-bottom a, .footer-bottom button { color: var(--cream); background: none; border: 0; padding: 0; font: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: 0.2em; min-height: 36px; }
+
+    /* ---------- Cookie consent ---------- */
+    .cookie {
+      position: fixed; left: var(--gutter); bottom: 1.25rem; z-index: 60;
+      width: min(400px, calc(100vw - 2 * var(--gutter)));
+      background: var(--navy); color: var(--cream); padding: 1.5rem;
+      border-radius: 6px; border: 1px solid rgba(242, 230, 208, 0.22);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+    }
+    .cookie h2 { font-size: 1.6rem; margin-bottom: 0.5rem; }
+    .cookie p { font-size: 0.95rem; color: #C9D3DD; }
+    .cookie a { color: var(--cream); }
+    .cookie .btn-row { margin-top: 1.1rem; }
+    .cookie .btn { min-height: 44px; padding: 0.6rem 1rem; font-size: 0.95rem; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+    }
+    @media print {
+      .site-header, .hero-control, .cookie, .nav-toggle { display: none !important; }
+      .hero { min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Icon sprite -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+    <symbol id="i-droplets" viewBox="0 0 24 24"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></symbol>
+    <symbol id="i-satellite" viewBox="0 0 24 24"><path d="M13 7 9 3 5 7l4 4"/><path d="m17 11 4 4-4 4-4-4"/><path d="m8 12 4 4 6-6-4-4Z"/><path d="m16 8 3-3"/><path d="M9 21a6 6 0 0 0-6-6"/></symbol>
+    <symbol id="i-thermometer" viewBox="0 0 24 24"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></symbol>
+    <symbol id="i-phone-app" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-radar" viewBox="0 0 24 24"><path d="M19.07 4.93A10 10 0 0 0 6.99 3.34"/><path d="M4 6h.01"/><path d="M2.29 9.62A10 10 0 1 0 21.31 8.35"/><path d="M16.24 7.76A6 6 0 1 0 8.23 16.67"/><path d="M12 18h.01"/><path d="M17.99 11.66A6 6 0 0 1 15.77 16.67"/><circle cx="12" cy="12" r="2"/><path d="m13.41 10.59 5.66-5.66"/></symbol>
+    <symbol id="i-hand" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></symbol>
+    <symbol id="i-rotate" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol>
+    <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></symbol>
+    <symbol id="i-factory" viewBox="0 0 24 24"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1"/><path d="M12 18h1"/><path d="M7 18h1"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+    <symbol id="i-percent" viewBox="0 0 24 24"><line x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></symbol>
+    <symbol id="i-wind" viewBox="0 0 24 24"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-timer" viewBox="0 0 24 24"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></symbol>
+    <symbol id="i-tower" viewBox="0 0 24 24"><path d="M4.9 16.1C1 12.2 1 5.8 4.9 1.9"/><path d="M7.8 4.7a6.14 6.14 0 0 0-.8 7.5"/><circle cx="12" cy="9" r="2"/><path d="M16.2 4.8c2 2 2.26 5.11.8 7.47"/><path d="M19.1 1.9a9.96 9.96 0 0 1 0 14.1"/><path d="M9.5 18h5"/><path d="m8 22 4-11 4 11"/></symbol>
+    <symbol id="i-landmark" viewBox="0 0 24 24"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><rect x="14" y="4" width="4" height="16" rx="1"/><rect x="6" y="4" width="4" height="16" rx="1"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></symbol>
+    <symbol id="i-dollar" viewBox="0 0 24 24"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></symbol>
+  </svg>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Defense Delivered, Wildfire Protection. Back to top">
+        <img src="assets/dd-logo-header.png" width="1200" height="377" alt="">
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#protect">Protect Your Home</a></li>
+          <li><a href="#embers">Embers Burn Homes</a></li>
+          <li><a href="#assessment">No Cost Inspection</a></li>
+          <li><a href="#risk-map">Wildfire Danger Map</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <div class="nav-extra">
+          <a class="btn btn-primary" href="#assessment">Schedule a Free Assessment</a>
+          <a class="btn btn-outline" href="tel:+19707103777"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call (970) 710-3777</a>
+        </div>
+      </nav>
+      <div class="header-actions">
+        <a class="header-phone" href="tel:+19707103777"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>(970) 710-3777</a>
+        <a class="btn btn-primary header-cta" href="#assessment">Free Assessment</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <svg class="icon i-menu" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="icon i-close" aria-hidden="true"><use href="#i-close"/></svg>
+          <span class="nav-toggle-label">Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-media">
+        <img class="hero-poster" src="assets/hero-poster.jpg" width="1920" height="1080" alt="" fetchpriority="high">
+        <video id="hero-video" muted loop playsinline preload="none" poster="assets/hero-poster.jpg" aria-hidden="true" tabindex="-1"
+               data-src-large="assets/hero-loop.mp4" data-src-small="assets/hero-loop-720.mp4"></video>
+      </div>
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Summit County's first wildfire hardening company</p>
+        <h1 id="hero-title">Protect Your Investment from Wildfire</h1>
+        <p class="lead">Automated exterior sprinkler systems and certified home hardening, designed in Colorado's high country and built to act before the fire arrives. Wet homes don't burn.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#assessment">Schedule a Free Assessment<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-outline" href="tel:+19707103777"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call (970) 710-3777</a>
+        </div>
+        <p class="hero-note">Serving Colorado and the Western United States. Nationwide for larger estates, HOAs and critical infrastructure.</p>
+      </div>
+      <button class="hero-control" id="hero-video-toggle" type="button">
+        <svg class="icon i-play" aria-hidden="true"><use href="#i-play"/></svg>
+        <svg class="icon i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+        <span class="ctl-label">Pause video</span>
+      </button>
+    </section>
+
+    <!-- ================= EMBERS ================= -->
+    <section class="section theme-cream" id="embers" aria-labelledby="embers-title">
+      <div class="container">
+        <div class="grid-2 is-wide-media">
+          <figure class="photo-frame ratio-4-3">
+            <img src="assets/cameron-dimarco-gn97htdmz14-unsplash.jpg" width="2500" height="1735" loading="lazy" decoding="async"
+                 alt="Glowing embers lifting off a small ground fire at dusk and scattering into the wind">
+          </figure>
+          <div>
+            <p class="num">01</p>
+            <p class="eyebrow">Why homes burn</p>
+            <h2 id="embers-title">It's not the flames. It's the embers.</h2>
+            <p class="lead" style="margin-top:1rem">More than 90% of homes lost in wildfires are ignited by flying embers, not direct flames.</p>
+            <p style="margin-top:1rem">Wind-driven embers travel miles ahead of the fire front, landing in gutters, vents, decks and landscaping, and igniting fires long before you ever see a flame. Even homes located two to three miles from the forest edge can be reduced to ash in minutes. Fire crews may not be able to reach you in time, and are sometimes forced to retreat when overrun by fire and ember storms.</p>
+            <p>Defense Delivered installs automated exterior suppression systems and home-hardening solutions that target exactly where embers land: rooftops, vents, gutters, decks and the surrounding 30-foot defensible zone. Our systems activate when you are away, soaking vulnerable areas in advance so your home can survive when fire crews cannot intervene.</p>
+          </div>
+        </div>
+
+        <div class="stats" role="list" aria-label="Key wildfire facts">
+          <div class="stat" role="listitem">
+            <div class="stat-value">90<span>%</span></div>
+            <div class="stat-label">of homes that burn in wildfires ignite from windblown embers</div>
+            <div class="stat-source">Not direct flames</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat-value">100<span>%</span></div>
+            <div class="stat-label">of homes with exterior sprinklers survived the 2007 Ham Lake fire</div>
+            <div class="stat-source">188 FEMA-funded systems, Minnesota</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat-value">12 <span>GPM</span></div>
+            <div class="stat-label">maximum active demand of the AquaPulse360 system</div>
+            <div class="stat-source">Intelligent sequential zoning</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat-value">2 <span>mi</span></div>
+            <div class="stat-label">a wildfire can be two miles away and still generate dangerous embers</div>
+            <div class="stat-source">Protection can begin days ahead</div>
+          </div>
+        </div>
+
+        <hr class="rule">
+
+        <div class="section-head is-wide">
+          <h3>Learn from the experts</h3>
+          <p class="lead">Two short videos the Defense Delivered team shares with every new client.</p>
+        </div>
+        <div class="embed-grid">
+          <div>
+            <iframe class="embed" loading="lazy" src="https://www.youtube-nocookie.com/embed/M9sel3wcBLg" title="Video: Protect your home from wildfire embers, from the Spokane Fire Department" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h4>Spokane Fire Chief on embers</h4>
+            <p>The Spokane Fire Department explains just how dangerous embers are, and why they are the leading cause of wildfire home destruction.</p>
+          </div>
+          <div>
+            <iframe class="embed" loading="lazy" src="https://www.youtube-nocookie.com/embed/p7_06ztAWIs" title="Video: Embers in flight, fall and ignite, from the Country Fire Authority of Australia" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h4>A real ember storm in Australia</h4>
+            <p>This footage from the Country Fire Authority shows an ember storm consuming the landscape. No sirens, no flames at first, just a hail of fire in the air.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= AQUAPULSE360 ================= -->
+    <section class="section theme-navy" id="protect" aria-labelledby="protect-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="num">02</p>
+          <p class="eyebrow">The escalating threat and a smarter solution</p>
+          <h2 id="protect-title">AquaPulse360<span aria-hidden="true">&trade;</span><span class="visually-hidden"> trademark</span> wildfire home protection</h2>
+          <p class="lead">Home hardening and defensible space remain essential. AquaPulse360 adds an active layer of protection that begins wetting vulnerable exterior surfaces before critical fire conditions reach the property, so the structure can start defending itself before firefighting resources arrive.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="feature-list">
+            <div class="feature">
+              <svg class="icon" aria-hidden="true"><use href="#i-rotate"/></svg>
+              <div>
+                <h3 class="sub">Intelligent sequential zoning</h3>
+                <p>Automated controls direct available water to the areas of greatest exposure rather than activating every zone at once, with a maximum active demand of approximately 12 gallons per minute.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <svg class="icon" aria-hidden="true"><use href="#i-satellite"/></svg>
+              <div>
+                <h3 class="sub">Real-time wildfire intelligence</h3>
+                <p>Integrates satellite wildfire data, thermal imaging, cloud-connected automation and zone control to respond to changing fire conditions as they happen.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <svg class="icon" aria-hidden="true"><use href="#i-home"/></svg>
+              <div>
+                <h3 class="sub">Water where protection is needed most</h3>
+                <p>Rooflines, windward walls, vents, decks and other vulnerable areas receive controlled, sequential water delivery that reduces unnecessary demand, preserves pressure and extends run time.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <svg class="icon" aria-hidden="true"><use href="#i-droplets"/></svg>
+              <div>
+                <h3 class="sub">Designed for mountain water supplies</h3>
+                <p>Built for communities where water availability and pressure matter. Operates with tank, well or approved community water supplies depending on site design. A controlled, measurable alternative to high-demand conventional exterior sprinklers.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <svg class="icon" aria-hidden="true"><use href="#i-users"/></svg>
+              <div>
+                <h3 class="sub">Scales from one home to a whole community</h3>
+                <p>Serves individual homes, HOAs, condominiums, commercial properties, ranches and entire communities. Multiple systems can be coordinated to avoid simultaneous peak demand, protecting water infrastructure and preserving pressure for firefighters.</p>
+              </div>
+            </div>
+          </div>
+          <div class="step-media">
+            <figure>
+              <div class="photo-frame ratio-3-4">
+                <img src="assets/home-fire-sprinklers.jpg" width="2500" height="3287" loading="lazy" decoding="async"
+                     alt="An exterior sprinkler mounted under a wooden eave misting the siding and vents of a mountain home, with a rainbow visible in the spray">
+              </div>
+              <figcaption>An AquaPulse360 eave sprinkler pre-wetting siding, soffit vents and windows ahead of ember exposure.</figcaption>
+            </figure>
+            <a class="text-link" href="https://wildfireprepared.org/wp-content/uploads/WPH-How-To-Prepare-My-Home-Checklist.pdf" target="_blank" rel="noopener">
+              How to prepare your home for wildfire (PDF checklist)<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> (opens in a new tab)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROCESS ================= -->
+    <section class="section theme-light" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="num">03</p>
+          <p class="eyebrow">How we work</p>
+          <h2 id="process-title">Assess it. Harden it. Protect it.</h2>
+          <p class="lead">Three steps, in order. Each one builds on the last, and each one is documented so your insurance carrier can see exactly what was done.</p>
+        </div>
+
+        <article class="step" aria-labelledby="step1-title">
+          <div>
+            <div class="step-num" aria-hidden="true">1</div>
+            <h3 id="step1-title">Assess It</h3>
+            <p class="step-kicker">Certified Wildfire Mitigation Specialists</p>
+            <p>We start with a comprehensive wildfire risk assessment of your property. Our certified Wildfire Mitigation experts, in conjunction with a Summit Fire/EMS fire inspector, provide a complete assessment report. Using Firewise USA principles, USDA Forest Service guidance and IBHS (Insurance Institute for Business and Home Safety) recommendations, we identify vulnerabilities and create a step-by-step plan to harden your home.</p>
+            <ul class="check-list" aria-label="What the assessment includes">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Defensible space recommendations</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Ember exposure risk analysis</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Custom wildfire mitigation plan</span></li>
+            </ul>
+            <p style="margin-top:1.1rem">Once the plan is complete, the wildfire mitigation report, with before and after photos, can be submitted to insurance companies to qualify for fire insurance rate reductions and discounts under Colorado House Bill 25-1182.</p>
+          </div>
+          <div class="step-media is-pair">
+            <div class="photo-frame ratio-3-4">
+              <img src="assets/defense-delivered-demo.jpg" width="2186" height="3007" loading="lazy" decoding="async"
+                   alt="Two Defense Delivered specialists in red shirts inspecting the stone foundation and rock perimeter of a log home, one writing notes on a clipboard">
+            </div>
+            <div class="photo-frame ratio-4-5">
+              <img src="assets/firewise-usa-sign.png" width="1682" height="1358" loading="lazy" decoding="async"
+                   alt="A Firewise USA sign on a wooden fence beside a dirt road in a green, wooded area">
+            </div>
+          </div>
+        </article>
+
+        <article class="step" aria-labelledby="step2-title">
+          <div>
+            <div class="step-num" aria-hidden="true">2</div>
+            <h3 id="step2-title">Harden It</h3>
+            <p class="step-kicker">Protect the first five feet</p>
+            <p>The area within five feet of your home is the most critical. We clear flammable vegetation, replace mulch with gravel or stone, and install fine mesh to block embers from entering vents, eaves and gutters. We make your home fire resistant.</p>
+            <div class="feature-list" style="margin-top:1.5rem">
+              <div class="feature">
+                <svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg>
+                <div><h4>Clear the ignition zone</h4><p>Flammable vegetation and mulch within five feet of the structure are removed or replaced with non-combustible gravel and stone.</p></div>
+              </div>
+              <div class="feature">
+                <svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg>
+                <div><h4>Seal the entry points</h4><p>Fine ember-resistant mesh on vents, eaves and gutters keeps embers from getting inside the attic and crawl spaces.</p></div>
+              </div>
+              <div class="feature">
+                <svg class="icon" aria-hidden="true"><use href="#i-ruler"/></svg>
+                <div><h4>Work outward in zones</h4><p>Defensible space recommendations extend to the 30-foot zone and beyond, following Firewise USA and IBHS guidance.</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="step-media">
+            <figure>
+              <div class="photo-frame ratio-4-3">
+                <img src="assets/home-hardening-perimeters.png" width="997" height="745" loading="lazy" decoding="async"
+                     alt="Illustrated diagram of a home with three color-coded defensible space perimeters: the immediate zone within five feet of the house, the intermediate zone to 30 feet, and the extended zone beyond">
+              </div>
+              <figcaption>Home hardening perimeters: the immediate, intermediate and extended defensible space zones around a structure.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="step" aria-labelledby="step3-title">
+          <div>
+            <div class="step-num" aria-hidden="true">3</div>
+            <h3 id="step3-title">Protect It</h3>
+            <p class="step-kicker">Automated wildfire suppression system</p>
+            <p>After home hardening, our Real Intelligence-powered automated exterior sprinkler suppression system is your last line of defense. With data fusion from thermal cameras, satellite wildfire alerts and temperature sensors, the system activates automatically as fire danger approaches your property, using a graduated response: first pre-wet exterior surfaces, then soak them, and finally deploy US Forest Service-approved Class A foam if needed.</p>
+            <p>Defense Delivered has the most advanced automated external wildfire suppression system on the market, at the lowest cost of any comparable system available today.</p>
+            <ul class="check-list" aria-label="Protection system highlights">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Class A firefighting foam, reported to be up to five times more effective than water alone</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Battery backup on every system, with optional cellular communication</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Developed with input from two Colorado fire departments</span></li>
+            </ul>
+          </div>
+          <div class="step-media is-pair">
+            <div class="photo-frame ratio-3-4">
+              <img src="assets/sprinkler-head-closeup.jpg" width="2500" height="2900" loading="lazy" decoding="async"
+                   alt="Close-up of an eave-mounted sprinkler spraying a fine mist across the wooden siding of a home">
+            </div>
+            <div class="photo-frame ratio-4-5">
+              <img src="assets/sprinklers-in-action.jpg" width="940" height="627" loading="lazy" decoding="async"
+                   alt="Exterior sprinklers misting the underside of a covered deck and the surrounding trees">
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= APP / CONTROL ================= -->
+    <section class="section theme-deep" id="app" aria-labelledby="app-title">
+      <div class="container">
+        <div class="grid-2">
+          <div class="phones">
+            <img src="assets/dd-iphone-app-1.jpg" width="1370" height="1918" loading="lazy" decoding="async"
+                 alt="A hand holding a phone showing the Defense Delivered app master control panel with controller status, temperature, a thermal camera feed and an Activate Sprinkler System button">
+            <img src="assets/dd-iphone-app-2.jpg" width="1369" height="1916" loading="lazy" decoding="async"
+                 alt="A hand holding a phone showing the Defense Delivered app North America active fire map with the nearest NIFC fire highlighted near Summit County, Colorado">
+          </div>
+          <div>
+            <p class="num">04</p>
+            <p class="eyebrow">Command from anywhere</p>
+            <h2 id="app-title">Full control from your phone. Full automation when you can't.</h2>
+            <p class="lead" style="margin:1rem 0 2rem">The AquaPulse360 app gives you the live thermal camera feed, an active fire map and one-touch activation. When nobody is home, the proprietary multi-sensor data fusion controller makes the call.</p>
+            <div class="feature-list is-2col">
+              <div class="feature"><svg class="icon" aria-hidden="true"><use href="#i-phone-app"/></svg><div><h3 class="sub">Full remote control</h3><p>Monitor, arm and activate the system from a secure dashboard on iOS and Android.</p></div></div>
+              <div class="feature"><svg class="icon" aria-hidden="true"><use href="#i-hand"/></svg><div><h3 class="sub">Manual override</h3><p>Trigger or stop the system by button on the valve enclosure or from the app.</p></div></div>
+              <div class="feature"><svg class="icon" aria-hidden="true"><use href="#i-radar"/></svg><div><h3 class="sub">Automatic triggering</h3><p>Thermal image detection, temperature monitoring, NIFC reports and satellite data feed the activation algorithm.</p></div></div>
+              <div class="feature"><svg class="icon" aria-hidden="true"><use href="#i-rotate"/></svg><div><h3 class="sub">Zone rotation</h3><p>Sprinkler zones rotate to manage water usage and keep pressure where it is needed.</p></div></div>
+              <div class="feature"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><div><h3 class="sub">Defends when you're away</h3><p>Redundant data sources let the system detect fire conditions and activate even while completely offline.</p></div></div>
+              <div class="feature"><svg class="icon" aria-hidden="true"><use href="#i-flame"/></svg><div><h3 class="sub">Built with fire departments</h3><p>Developed with input from two Colorado fire departments for compatibility with their wildfire fighting protocols and practices.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROOF ================= -->
+    <section class="section theme-cream" id="proof" aria-labelledby="proof-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="num">05</p>
+          <p class="eyebrow">Proven in the field</p>
+          <h2 id="proof-title">Wet homes don't burn</h2>
+          <p class="lead">Automated external suppression systems have been shown to protect and save between 96% and 100% of homes in active wildfires.</p>
+        </div>
+
+        <div class="grid-2 is-wide-media">
+          <figure>
+            <div class="video-frame">
+              <video controls preload="none" poster="assets/cbs-news-poster.jpg" width="1280" height="720"
+                     aria-label="CBS News Colorado story on Defense Delivered, October 21, 2025">
+                <source src="assets/cbs-news-colorado-2025-10-21.mp4" type="video/mp4">
+                Your browser does not support embedded video. <a href="assets/cbs-news-colorado-2025-10-21.mp4">Download the CBS News Colorado story (MP4)</a>.
+              </video>
+            </div>
+            <figcaption>CBS News Colorado story on Defense Delivered, October 21, 2025. Two minutes and 34 seconds.</figcaption>
+          </figure>
+          <div>
+            <h3>The Ham Lake fire</h3>
+            <p style="margin-top:0.75rem">A 2001 FEMA grant paid for 188 homes in Minnesota to have automated external sprinkler systems installed for wildfire protection. During the 2007 Ham Lake wildfire, 100% of the homes with external sprinkler systems survived, while more than 100 neighboring homes without them were destroyed.</p>
+            <p>It is often quoted that an external wildfire sprinkler system increases the likelihood of a home surviving a wildfire by around 86%. The figure originates from wildfire mitigation case studies by agencies including the National Fire Protection Association, CAL FIRE and university wildfire research programs.</p>
+            <a class="text-link" href="https://chaparralwisdom.org/2018/12/07/exterior-fire-sprinklers-saved-188-properties-wet-homes-dont-burn/" target="_blank" rel="noopener">Read "Wet Homes Don't Burn"<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+            <figure style="margin-top:2rem">
+              <div class="photo-frame ratio-16-9">
+                <img src="assets/firewise-factsheets-exteriorsprinklers-ncoes-logo.jpeg" width="664" height="443" loading="lazy" decoding="async"
+                     alt="A wet wooden deck with tables and chairs beside a home, with sprinkler spray and a rainbow visible over the roof">
+              </div>
+              <figcaption>Exterior sprinklers wetting a deck and roofline. Photo: Insurance Institute for Business and Home Safety, from the Firewise fact sheet on exterior sprinklers.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <hr class="rule">
+
+        <div class="grid-2">
+          <blockquote class="quote">
+            <p>"Research shows that homes can survive wildfires with proper preparation, even in extreme conditions."</p>
+            <footer>Dr. Jack Cohen, USDA Forest Service Fire Scientist</footer>
+          </blockquote>
+          <figure class="photo-frame ratio-16-9">
+            <img src="assets/eave-sprinkler-wide.jpg" width="2420" height="1747" loading="lazy" decoding="async"
+                 alt="Water droplets catching sunlight as an eave sprinkler sprays the dark siding and windows of a mountain home">
+          </figure>
+        </div>
+
+        <hr class="rule">
+
+        <div class="section-head is-wide">
+          <h3>More from the fire science community</h3>
+        </div>
+        <div class="embed-grid is-4">
+          <div>
+            <iframe class="embed" loading="lazy" src="https://www.youtube-nocookie.com/embed/vL_syp1ZScM" title="Video: Your Home Can Survive a Wildfire, from the National Fire Protection Association" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h4>Your Home Can Survive a Wildfire</h4>
+            <p>National Fire Protection Association</p>
+          </div>
+          <div>
+            <iframe class="embed" loading="lazy" src="https://www.youtube-nocookie.com/embed/JaKZT6PXhTE" title="Video: Prepare Your Home With Defensible Space, from CAL FIRE" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h4>Prepare your home with defensible space</h4>
+            <p>CAL FIRE</p>
+          </div>
+          <div>
+            <iframe class="embed" loading="lazy" src="https://www.youtube-nocookie.com/embed/rqjcd6pD778" title="Video: Protect your home with defensible space, from CAL FIRE" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h4>Protect your home with defensible space</h4>
+            <p>CAL FIRE</p>
+          </div>
+          <div>
+            <iframe class="embed" loading="lazy" src="https://www.youtube-nocookie.com/embed/N0ynS-AakW0" title="Video: Facing Wildfire Risk, Homeowners Turn to New Innovations to Protect Their Homes, from NBC Bay Area" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h4>Insurance case study</h4>
+            <p>NBC Bay Area: homeowners turn to new innovations to protect their homes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INSURANCE / EQUITY / FINANCING ================= -->
+    <section class="section theme-white" id="insurance" aria-labelledby="insurance-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="num">06</p>
+          <p class="eyebrow">Insurance, equity and financing</p>
+          <h2 id="insurance-title">Your home can survive a wildfire if you prepare in advance</h2>
+          <p class="lead">Even with good insurance coverage, a policy is limited to the replacement value to rebuild. Mitigation protects the equity and the irreplaceable possessions a policy cannot.</p>
+        </div>
+
+        <div class="grid-3">
+          <div>
+            <svg class="icon" style="color:var(--accent-2)" aria-hidden="true"><use href="#i-percent"/></svg>
+            <h3 style="margin-top:1rem">Insurance coverage and discounts</h3>
+            <p style="margin-top:0.75rem">Colorado insurance companies have begun denying coverage to homes in the Wildland-Urban Interface zone, or dramatically increasing fire insurance rates. Colorado House Bill 25-1182, passed in May 2025, addresses this exact topic. Beginning in July 2026, Colorado insurers must consider all wildfire mitigation efforts in their rate and coverage decisions and provide discounts for property-specific and community mitigation.</p>
+            <p>Your Summit Fire/EMS wildfire assessment report, documenting your remediation work with before-and-after photographs, can be submitted to your insurer for rate reductions and discounts. This is where mitigation pays for itself over a period of years.</p>
+          </div>
+          <div>
+            <svg class="icon" style="color:var(--accent-2)" aria-hidden="true"><use href="#i-home"/></svg>
+            <h3 style="margin-top:1rem">Protect your equity</h3>
+            <p style="margin-top:0.75rem">If your home is valued at $2 million and your policy covers $1 million, the equity balance disappears until you have rebuilt, a process that can easily take two years.</p>
+            <p>Your return on investment is insuring or protecting that equity value, and your irreplaceable possessions, with active home fire protection.</p>
+            <p>Colorado House Bill 24-1091 also voids HOA covenants and deed restrictions that prohibit fire-resistant building materials, so associations cannot stand in the way of hardening your home.</p>
+          </div>
+          <div>
+            <svg class="icon" style="color:var(--accent-2)" aria-hidden="true"><use href="#i-dollar"/></svg>
+            <h3 style="margin-top:1rem">Financing available</h3>
+            <p style="margin-top:0.75rem">See personalized monthly payment options within minutes, without affecting your credit score. No prepayment penalties. No home equity required. 0% financing up to $15,000 with 18 months to pay is available.</p>
+            <ul class="check-list" aria-label="Financing highlights">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Loan amounts up to $250,000 through Hearth</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Funding within one to three days</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Project financing up to $500,000 for HOA and commercial mitigation</span></li>
+            </ul>
+            <figure style="margin-top:1.5rem; max-width:220px">
+              <img src="assets/hearth-financing-badge.png" width="310" height="610" loading="lazy" decoding="async"
+                   alt="Hearth monthly payment options badge: $1,000 to $250,000, 60-second pre-qualification, does not affect credit score">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRICING ================= -->
+    <section class="section theme-cream" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="grid-2 is-wide-media">
+          <div>
+            <p class="num">07</p>
+            <p class="eyebrow">Straight answers on cost</p>
+            <h2 id="pricing-title">Not only for luxury homes</h2>
+            <p class="lead" style="margin:1rem 0 1.5rem">We protect cabins, townhomes, ski condos and custom homes in wildfire zones. Your free assessment includes a custom design and an accurate quote.</p>
+            <div class="table-wrap">
+              <table>
+                <caption>Typical pricing and timelines by property type</caption>
+                <thead>
+                  <tr><th scope="col">Property</th><th scope="col">Starting price</th><th scope="col">Typical range</th><th scope="col">Installation</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">Single-family homes</th><td class="figure">$7.50 / sq ft</td><td>Most homes fall in the $21,500 to $35,000 range depending on size, roof type, layout, number of structures, water source and pump needs</td><td>1 to 2 weeks after design approval</td></tr>
+                  <tr><th scope="row">Condos and commercial</th><td class="figure">$6.50 / sq ft</td><td>A 20,000 sq ft building might cost around $130,000 before grants or subsidies</td><td>10 to 15 business days, with no occupant disruption</td></tr>
+                  <tr><th scope="row">Critical infrastructure</th><td class="figure">Custom</td><td>Assessment and design in 2 to 6 weeks; installation based on site size</td><td>Zero disruption to operations is the target</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <figure class="photo-frame ratio-3-4">
+            <img src="assets/doctor-tinieblas-y-hnptzo0kk-unsplash.jpg" width="2500" height="1670" loading="lazy" decoding="async"
+                 alt="A row of modern townhomes with shingle and board siding and rooftop solar panels under a blue sky">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHO WE PROTECT ================= -->
+    <section class="section theme-navy" id="who" aria-labelledby="who-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="num">08</p>
+          <p class="eyebrow">Who we protect</p>
+          <h2 id="who-title">Homes, communities and the infrastructure they depend on</h2>
+        </div>
+        <div class="segments">
+          <article class="segment">
+            <div class="photo-frame ratio-4-3">
+              <img src="assets/russell-smith-o-eyeuzdtck-unsplash.jpg" width="2500" height="1875" loading="lazy" decoding="async"
+                   alt="Aerial view of a mountain neighborhood of homes along a road with green fields and foothills beyond">
+            </div>
+            <svg class="icon" style="color:var(--accent-2)" aria-hidden="true"><use href="#i-home"/></svg>
+            <h3>Homes, cabins and ranches</h3>
+            <p class="muted">Insurance-ready wildfire mitigation for primary residences, second homes, cabins and rural properties. Most installs are complete in one to two weeks, and you receive app access plus emergency activation training.</p>
+            <ul class="check-list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Free assessment, onsite survey and final design</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>HOA and insurance documentation handled for you</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Optional seasonal checkups, with software updates at no cost</span></li>
+            </ul>
+          </article>
+          <article class="segment">
+            <div class="photo-frame ratio-4-3">
+              <img src="assets/fall-3720449.jpg" width="2500" height="1349" loading="lazy" decoding="async"
+                   alt="A multi-building condominium complex with wood balconies set against a hillside of golden aspens">
+            </div>
+            <svg class="icon" style="color:var(--accent-2)" aria-hidden="true"><use href="#i-building"/></svg>
+            <h3>Condominiums and HOAs</h3>
+            <p class="muted">Condominium buildings in the WUI face skyrocketing premiums, deductibles of $500,000 to $5,000,000 per claim, and insurers demanding demonstrated mitigation. Without it, many HOAs are one fire away from insolvency.</p>
+            <ul class="check-list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Automated suppression for roofs, eaves, decks and defensible zones</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Eligible for FEMA BRIC, state mitigation and utility grants, up to 70% cost share</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>RockRoseRisk insurance review and underwriter-ready documentation</span></li>
+            </ul>
+            <p class="muted"><strong>Modeled example:</strong> a 16-unit condo with a 19,000 sq ft rooftop in Summit County. System cost roughly $105,000 to $150,000, Tier 1 carrier quote eligibility pending mitigation, and a return on investment under three years.</p>
+          </article>
+          <article class="segment">
+            <div class="mosaic">
+              <div class="photo-frame"><img src="assets/john-cameron-7h-djo7higc-unsplash.jpg" width="2500" height="1875" loading="lazy" decoding="async" alt="Aerial view of a water treatment plant with circular and rectangular tanks surrounded by roads and open fields"></div>
+              <div class="photo-frame"><img src="assets/american-public-power-association-eibth5dxw9w-unsplash.jpg" width="2500" height="1661" loading="lazy" decoding="async" alt="Wind turbines on rolling green hills at sunset"></div>
+              <div class="photo-frame"><img src="assets/satellite-wildfire-image-1200w.jpg" width="1200" height="600" loading="lazy" decoding="async" alt="Satellite image of a wildfire burning across a forested mountain range, with smoke streaming over the ridges"></div>
+              <div class="photo-frame"><img src="assets/david-schultz-6liqs-kku3c-unsplash.jpg" width="2500" height="3750" loading="lazy" decoding="async" alt="Two computer monitors in a dark room, the front one showing a code editor over a desert landscape wallpaper"></div>
+            </div>
+            <svg class="icon" style="color:var(--accent-2)" aria-hidden="true"><use href="#i-factory"/></svg>
+            <h3>Commercial and critical infrastructure</h3>
+            <p class="muted">A modular smart controller that integrates real-time wildfire detection with automated sprinkler deployment, giving electrical substations, oil and gas gathering stations, solar farms, data centers and water treatment plants the ability to self-defend before a wildfire reaches the site.</p>
+            <ul class="check-list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Up to eight thermal cameras for 360-degree perimeter coverage</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Live NIFC, NASA FIRMS and VIIRS fire maps plus Red Flag Warnings</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Cellular backup and battery redundancy, fully off-grid capable</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Integrates with SCADA and building automation via Modbus, MQTT or REST API</span></li>
+            </ul>
+          </article>
+        </div>
+
+        <hr class="rule">
+
+        <div class="grid-2">
+          <div>
+            <h3>What to expect: installation timeline</h3>
+            <ol class="timeline" style="margin-top:1.25rem">
+              <li><div><h4>Free assessment</h4><p>We review maps, roof design, water supply and fire exposure.</p></div></li>
+              <li><div><h4>Onsite survey and final design</h4><p>We capture measurements and lay out every sprinkler coverage zone.</p></div></li>
+              <li><div><h4>HOA, insurance and permitting support</h4><p>If needed, we provide drawings and benefits documentation.</p></div></li>
+              <li><div><h4>Installation, typically one to two weeks</h4><p>Licensed technicians install sprinklers, sensors and the controller.</p></div></li>
+              <li><div><h4>System test and homeowner training</h4><p>You receive app access and emergency activation instructions.</p></div></li>
+              <li><div><h4>Ongoing monitoring, optional</h4><p>Seasonal checkups and recommended maintenance. Software updates included at no cost.</p></div></li>
+            </ol>
+          </div>
+          <figure class="photo-frame ratio-4-3">
+            <img src="assets/victor-meza-ct64bwnhrnq-unsplash.jpg" width="2500" height="2255" loading="lazy" decoding="async"
+                 alt="A worker in a hard hat and safety vest leaning over the edge of a flat orange rooftop against a clear blue sky">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RISK MAP ================= -->
+    <section class="section theme-light" id="risk-map" aria-labelledby="risk-title">
+      <div class="container">
+        <div class="grid-2">
+          <div>
+            <p class="num">09</p>
+            <p class="eyebrow">Wildfire danger map</p>
+            <h2 id="risk-title">Know your risk before fire season</h2>
+            <p class="lead" style="margin:1rem 0 1.5rem">The Colorado Wildfire Risk Viewer, developed by the Colorado State Forest Service, gives an interactive, location-based view of wildfire threat and fire history so homeowners, community leaders and property managers can make informed mitigation decisions.</p>
+            <div class="feature-list">
+              <div class="feature">
+                <svg class="icon" aria-hidden="true"><use href="#i-map"/></svg>
+                <div><h3 class="sub">County summary tool</h3><p>Select your county to open its Wildland-Urban Interface risk infosheet, then download or print the county wildfire risk profile as a PDF.</p></div>
+              </div>
+              <div class="feature">
+                <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+                <div><h3 class="sub">Your fire intensity rating</h3><p>Enter an address or drop a point on the map to receive a Potential Fire Intensity Rating based on a quarter-mile buffer around your location, including surrounding vegetation, slope and other fire behavior indicators.</p></div>
+              </div>
+            </div>
+            <p class="muted" style="margin-top:1.5rem"><small>Please note: the rating reflects conditions around your location, not only on your specific property.</small></p>
+            <div class="btn-row" style="margin-top:1.5rem">
+              <a class="btn btn-navy" href="https://co-pub.coloradoforestatlas.org/#/" target="_blank" rel="noopener">Check your wildfire risk (Colorado)<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+            </div>
+          </div>
+          <figure>
+            <div class="photo-frame">
+              <img src="assets/colorado-wildfire-risk-map.png" width="988" height="854" loading="lazy" decoding="async"
+                   alt="Screenshot of the Colorado Wildfire Risk Viewer showing a color-coded wildfire risk map of the state">
+            </div>
+            <figcaption>The Colorado Wildfire Risk Viewer from the Colorado State Forest Service.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section theme-deep" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="grid-2 is-wide-media">
+          <div class="step-media">
+            <figure>
+              <div class="photo-frame ratio-16-9">
+                <img src="assets/ptarmigan-fire1.jpeg" width="2500" height="1667" loading="lazy" decoding="async"
+                     alt="The Ptarmigan wildfire burning on a forested ridge at dusk, with flames and smoke rising above the roofline of a home in the foreground">
+              </div>
+              <figcaption>The Ptarmigan Fire above Hamilton Creek, Summit County, Colorado, late summer 2021.</figcaption>
+            </figure>
+            <figure class="photo-frame ratio-16-9">
+              <img src="assets/ptarmigan-fire.jpeg" width="1280" height="720" loading="lazy" decoding="async"
+                   alt="A column of wildfire smoke rising from a mountainside above a valley with homes and autumn trees">
+            </figure>
+          </div>
+          <div>
+            <p class="num">10</p>
+            <p class="eyebrow">About us</p>
+            <h2 id="about-title">It all began with a fire</h2>
+            <p class="lead" style="margin:1rem 0 1rem">In the late summer of 2021, our home was just half a mile from the Ptarmigan, Colorado wildfire. Flames were visible on our doorbell camera, and we weren't even in town.</p>
+            <p>Born from necessity, Defense Delivered is Summit County's first wildfire hardening company. We offer certified home hardening services and automated, remotely controllable external sprinkler systems that insure your home's equity against wildfire destruction.</p>
+            <p>Our mission is to provide effective, state-of-the-art and affordable wildfire protection. With our free assessment, building owners gain a clear understanding of how to reduce wildfire risk and protect their most valuable asset.</p>
+          </div>
+        </div>
+
+        <hr class="rule">
+
+        <div class="section-head is-wide">
+          <h3>Meet the Defense Delivered team</h3>
+        </div>
+        <div class="team">
+          <figure>
+            <div class="photo-frame"><img src="assets/headshot-1739797542583.jpg" width="96" height="96" loading="lazy" decoding="async" alt="Portrait of Phillip Dolamore"></div>
+            <figcaption>
+              <span class="name">Phillip Dolamore</span>
+              <span class="role">Chairman</span>
+              <details><summary>Read bio</summary><p>A lifelong entrepreneur with more than 40 years of business experience and the founder of two successful technology companies. After retiring to Hamilton Creek, Colorado, the nearby Ptarmigan Fire brought the growing threat of wildfire close to home. Seeing firsthand the vulnerability of mountain communities, Phillip set out to find a better way to protect his home, his neighbors, and other wildfire-exposed communities. That experience became the catalyst for Defense Delivered.</p></details>
+            </figcaption>
+          </figure>
+          <figure>
+            <div class="photo-frame"><img src="assets/duston-headshot.png" width="1116" height="1501" loading="lazy" decoding="async" alt="Portrait of Duston Dolamore"></div>
+            <figcaption>
+              <span class="name">Duston Dolamore</span>
+              <span class="role">Founder and President</span>
+              <details><summary>Read bio</summary><p>Duston leads product development, system design and field deployment of the company's wildfire protection technology. A graduate of Snowy Peaks High School in Summit County, he earned a degree in Business from Florida Atlantic University. He is a Certified Wildfire Mitigation Specialist with hands-on expertise in CAD, system engineering, site-specific design and installation, and a licensed contractor in Summit, Eagle and other mountain communities.</p></details>
+            </figcaption>
+          </figure>
+          <figure>
+            <div class="photo-frame"><img src="assets/headshot-58377228.jpg" width="1057" height="1057" loading="lazy" decoding="async" alt="Portrait of Nick Christiansen"></div>
+            <figcaption>
+              <span class="name">Nick Christiansen</span>
+              <span class="role">Founder and Chief Information Officer</span>
+              <details><summary>Read bio</summary><p>Nick is the lead software architect behind the Defense Delivered intelligent wildfire protection platform. A graduate of Summit High School, he earned his Bachelor of Science from Colorado State University. He designed the proprietary software and integrated hardware architecture that brings together satellite wildfire intelligence, multiple thermal cameras, environmental and lightning detection, remote communications, automated decision-making and manual override into one coordinated system powered by iOS and Android applications.</p></details>
+            </figcaption>
+          </figure>
+          <figure>
+            <div class="photo-frame"><img src="assets/amber-headshot.png" width="1011" height="1150" loading="lazy" decoding="async" alt="Portrait of Amber Smith"></div>
+            <figcaption>
+              <span class="name">Amber Smith</span>
+              <span class="role">Chief Operating Officer</span>
+              <details><summary>Read bio</summary><p>Amber brings more than a decade of experience in the contracting industry, where she managed complex operations across multiple states. She oversees day-to-day operations, project coordination, contractor and installer relationships, compliance, scheduling and the processes that take projects from initial planning through installation and completion.</p></details>
+            </figcaption>
+          </figure>
+          <figure>
+            <div class="photo-frame"><img src="assets/graham-headshot.jpg" width="438" height="565" loading="lazy" decoding="async" alt="Portrait of Graham Dolamore"></div>
+            <figcaption>
+              <span class="name">Graham Dolamore</span>
+              <span class="role">VP, Government Affairs</span>
+              <details><summary>Read bio</summary><p>Graham supports the company's engagement with state and local governments, regulatory agencies, water authorities, fire districts and other public-sector stakeholders. A graduate of Summit High School, he earned his degree in Political Science from Florida Atlantic University.</p></details>
+            </figcaption>
+          </figure>
+          <figure>
+            <div class="photo-frame"><img src="assets/garry-briese.jpg" loading="lazy" decoding="async" alt="Portrait of Garry Briese"></div>
+            <figcaption>
+              <span class="name">Garry Briese</span>
+              <span class="role">Director</span>
+              <details><summary>Read bio</summary><p>Former Executive Director of the Colorado State Fire Chiefs, representing the senior leadership of nearly 400 fire departments across Colorado. Garry is a principal at Briese Associates LLC, serves on the Board of Directors of WS Darley Company, is a Senior Advisor to the Firefighter Cancer Support Network, and sits on the board of the International Association of Fire Chiefs Foundation.</p></details>
+            </figcaption>
+          </figure>
+          <figure>
+            <div class="photo-frame"><img src="assets/suzy.jpeg" width="896" height="1088" loading="lazy" decoding="async" alt="Portrait of Susan Friedlander Calzone"></div>
+            <figcaption>
+              <span class="name">Susan Friedlander Calzone</span>
+              <span class="role">Strategic Advisor</span>
+              <details><summary>Read bio</summary><p>A Consulting Partner with ERA Group and an accomplished CEO, President, COO and Board Director with more than 40 years of experience. Susan served as CEO of Foundation Source and spent nearly two decades as Chief Administrative Officer of Bloomberg L.P., helping scale the company from approximately 50 employees to more than 7,500 worldwide.</p></details>
+            </figcaption>
+          </figure>
+          <figure>
+            <div class="video-frame video-vertical" style="aspect-ratio:4/5">
+              <video controls preload="none" poster="assets/field-message-poster.jpg" width="720" height="1280" style="object-fit:cover"
+                     aria-label="A field update from the Defense Delivered team">
+                <source src="assets/field-message-vertical.mp4" type="video/mp4">
+                Your browser does not support embedded video. <a href="assets/field-message-vertical.mp4">Download the field update (MP4)</a>.
+              </video>
+            </div>
+            <figcaption>
+              <span class="name">From the field</span>
+              <span class="role">A short update from the Defense Delivered team, 53 seconds</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section theme-cream faq" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="num">11</p>
+          <p class="eyebrow">Frequently asked questions</p>
+          <h2 id="faq-title">Protection, insurance, pricing, installation and technology</h2>
+          <p class="lead">Most homes lost in wildfires are ignited by embers landing on roofs, decks and landscaping before flames ever reach the structure. Our system detects danger early and automatically creates a protective moisture and humidity barrier around your home while you evacuate safely.</p>
+        </div>
+
+        <div class="grid-3" style="align-items:start">
+          <div class="faq-group">
+            <h3>Homes</h3>
+            <details>
+              <summary>How does the system protect my home?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <div><p>Our external wildfire suppression system pre-wets your roof, decks, siding and landscaping to prevent embers and radiant heat from igniting your home. It builds a defensive moisture barrier before the fire arrives, giving firefighters, insurance carriers and you more time and confidence.</p></div>
+            </details>
+            <details>
+              <summary>Will I run out of water?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <div><p>Most homes have access to more water than they realize. Our system uses far less water than the competition and is easily supplied by a municipal supply. Underground or above-ground storage tanks are used on properties without municipal water or on large homes. Pools, ponds and cisterns may be used, and pumps can maintain pressure even if the utility shuts down. We size your system to protect your home throughout the wildfire threat window.</p></div>
+            </details>
+            <details>
+              <summary>Will this work if I evacuate or lose power?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <div><p>Yes. All systems include battery backup. Optional cellular communication keeps the system online even if the internet or power fails.</p></div>
+            </details>
+            <details>
+              <summary>How long will it run during a fire?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <div><p>Run time is variable and adjustable based on wind, humidity, water supply and fire proximity. A wildfire can be two miles away and generating dangerous embers, so the system is designed to raise humidity and saturate the home to prevent ignition, sometimes two days or more before the fire approaches.</p></div>
+            </details>
+            <details>
+              <summary>Will my HOA approve this?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <div><p>Almost always. Our components are discreet and low-profile, and we provide HOA submission packets with clear renderings and safety documentation. Colorado House Bill 24-1091 also voids HOA covenants that prohibit fire-resistant materials.</p></div>
+            </details>
+            <details>
+              <summary>Do you only serve Colorado?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <div><p>We serve Colorado and the Western United States, and we travel nationwide for larger estates, rural properties, religious and retreat centers and commercial infrastructure.</p></div>
+            </details>
+          </div>
+
+          <div class="faq-group">
+            <h3>Insurance</h3>
+            <details>
+              <summary>Will this help with my insurance?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <div><p>Possibly. Insurance companies in Colorado and across the West may require wildfire mitigation for policy renewals. Our system provides documented wildfire risk suppression that may qualify you for discounts, reduced deductibles and a better chance of maintaining coverage. We help with hardening and mitigation and gather the documentation your carrier needs.</p></div>
+            </details>
+            <details>
+              <summary>What documentation do insurers want to see?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <div>
+                <p>Recommended criteria for mitigation credits include:</p>
+                <ul>
+                  <li>Installation documentation: professional installation certificate, as-built diagrams and component specs</li>
+                  <li>Annual inspection: a third-party CWMS report verifying coverage, operation, and freeze and backflow protection</li>
+                  <li>Operational readiness: test activation logs and maintenance records demonstrating over 90% readiness</li>
+                  <li>System design: zoning, short-burst programming, wall and eave-directed nozzles, verified backup water and power</li>
+                  <li>Home hardening: proof of defensible space and ember-resistant retrofits</li>
+                </ul>
+              </div>
+            </details>
+            <details>
+              <summary>Is the assessment really free?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <div><p>Yes. There is no cost for the inspection or the report. It is provided through your local fire department in partnership with Defense Delivered. Most reports are completed within 7 to 10 days of the onsite visit, and the report is insurance-ready.</p></div>
+            </details>
+            <details>
+              <summary>Do I have to use Defense Delivered for the mitigation work?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <div><p>No. The assessment is completely independent and you can choose any contractor. Our team is available to help complete the recommended improvements if you would like.</p></div>
+            </details>
+          </div>
+
+          <div class="faq-group">
+            <h3>Condos, HOAs and commercial</h3>
+            <details>
+              <summary>Can your system protect multi-unit buildings?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <div><p>Yes. We design wildfire sprinkler protection for condominiums, townhomes and shared-roof buildings, including rooftops, eaves, common decks and landscaping. Most multi-unit projects are completed in two to four weeks with no occupant disruption.</p></div>
+            </details>
+            <details>
+              <summary>Can we apply for grants?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <div><p>Yes. Funding sources may include FEMA BRIC and HMGP grants, state wildfire resilience programs, DOE and utility wildfire-risk reduction incentives, and certain critical-infrastructure cost-share programs. We guide applications and compliance and provide the engineering and hazard-mitigation documentation required.</p></div>
+            </details>
+            <details>
+              <summary>Who pays for installation?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <div><p>Associations typically use a combination of reserves, special assessments, grants and insurance incentives. Defense Delivered offers financing for mitigation and wildfire suppression systems up to $500,000, and we help boards communicate clearly with residents.</p></div>
+            </details>
+            <details>
+              <summary>Will this affect the building's appearance?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <div><p>We believe our installations should be an extension of the existing property, and we build them to match the unique characteristics of any building. Harmonious, functional design remains our top priority.</p></div>
+            </details>
+            <details>
+              <summary>Can we integrate with existing security systems?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <div><p>Yes. Our controllers integrate with fire panels, site safety dashboards and network monitoring centers. Real-time alerts by SMS, email and app support command-center decision-making.</p></div>
+            </details>
+            <details>
+              <summary>Do you provide service and maintenance?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+              <div><p>Yes. We offer annual inspection plans, winterization and emergency support to ensure your system is ready year-round.</p></div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ASSESSMENT / CONTACT ================= -->
+    <section class="section theme-navy" id="assessment" aria-labelledby="assessment-title">
+      <div class="container">
+        <div class="grid-2" style="align-items:start">
+          <div>
+            <p class="num">12</p>
+            <p class="eyebrow">No cost wildfire inspection</p>
+            <h2 id="assessment-title">Get your free wildfire safety report</h2>
+            <p class="lead" style="margin:1rem 0 1rem">See exactly what your property needs to qualify for insurance mitigation credits. You receive a detailed, photo-based report that you can submit directly to your insurance carrier, following Colorado's recommended guidelines for home protection.</p>
+            <p>An Insurance Wildfire Mitigation Assessment is a free, onsite evaluation of your property's wildfire risks. Once your recommended improvements are complete, you can submit the final inspection report to your insurer for verification and potential premium discounts. This no-cost service is provided through your local fire department, in partnership with Defense Delivered.</p>
+            <div class="contact-lines">
+              <div class="contact-line">
+                <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+                <div><a href="tel:+19707103777">(970) 710-3777</a><span>Call or text. Sales inquiries and scheduling.</span></div>
+              </div>
+              <div class="contact-line">
+                <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                <div><a href="mailto:sales@defensedelivered.com?subject=Quotation%20Request">sales@defensedelivered.com</a><span>For a quotation, email us with your property address.</span></div>
+              </div>
+              <div class="contact-line">
+                <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+                <div><strong style="font-size:1.15rem">Summit County, Colorado</strong><span>Serving Colorado and the Western United States.</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <form class="form-card" id="assessment-form" action="#" method="post" novalidate aria-labelledby="form-title" aria-describedby="form-intro">
+              <h3 id="form-title">Request a free assessment</h3>
+              <p id="form-intro" class="muted" style="margin:0.5rem 0 1.5rem; color:var(--grey)">Fill out the form, or call <a href="tel:+19707103777">970-710-3777</a>. Fields marked required must be completed.</p>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="f-first">First name <span class="hint">(required)</span></label>
+                  <input id="f-first" name="first_name" type="text" autocomplete="given-name" required data-required data-required-msg="Enter your first name.">
+                  <p class="form-error" id="f-first-error" aria-live="polite"></p>
+                </div>
+                <div class="form-field">
+                  <label for="f-last">Last name <span class="hint">(required)</span></label>
+                  <input id="f-last" name="last_name" type="text" autocomplete="family-name" required data-required data-required-msg="Enter your last name.">
+                  <p class="form-error" id="f-last-error" aria-live="polite"></p>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="f-email">Email <span class="hint">(required)</span></label>
+                  <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required data-required data-required-msg="Enter your email address.">
+                  <p class="form-error" id="f-email-error" aria-live="polite"></p>
+                </div>
+                <div class="form-field">
+                  <label for="f-phone">Phone</label>
+                  <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="f-phone-hint">
+                  <p class="hint" id="f-phone-hint">Optional. Format: (970) 555-0100</p>
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="f-address">Property address <span class="hint">(required)</span></label>
+                <input id="f-address" name="address" type="text" autocomplete="street-address" required data-required data-required-msg="Enter the address of the property to be assessed.">
+                <p class="form-error" id="f-address-error" aria-live="polite"></p>
+              </div>
+              <div class="form-field">
+                <label for="f-water">Water supply</label>
+                <input id="f-water" name="water_supply" type="text" aria-describedby="f-water-hint">
+                <p class="hint" id="f-water-hint">Municipal, well or other.</p>
+              </div>
+              <div class="form-field">
+                <label for="f-notes">Additional notes</label>
+                <textarea id="f-notes" name="notes" aria-describedby="f-notes-hint"></textarea>
+                <p class="hint" id="f-notes-hint">Things we should know about your property.</p>
+              </div>
+              <div class="form-consent">
+                <input id="f-sms" name="sms_consent" type="checkbox">
+                <label for="f-sms">Yes, Defense Delivered may text me at the number above to schedule my assessment. Message and data rates may apply. Reply STOP to opt out.</label>
+              </div>
+              <button class="btn btn-navy" type="submit" style="width:100%">Request my free assessment<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+              <p class="form-status" id="form-status" role="alert" aria-live="assertive"></p>
+            </form>
+
+            <div class="form-success" id="form-success" hidden tabindex="-1">
+              <h3>Thank you! We've received your request.</h3>
+              <p>We'll contact you shortly to schedule your assessment. Feel free to text us at <a href="sms:+19707103777">970 710 3777</a> in the meantime.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/dd-logo-round.png" width="1175" height="1175" loading="lazy" decoding="async" alt="Defense Delivered Wildfire Suppression emblem: an elephant spraying water over flames">
+          <p>Defense Delivered is Summit County's first wildfire hardening company. Certified home hardening, automated exterior sprinkler systems and insurance-ready documentation for homes, HOAs, commercial properties and critical infrastructure.</p>
+        </div>
+        <nav aria-label="Footer, explore">
+          <h3 class="sub">Explore</h3>
+          <ul>
+            <li><a href="#protect">Protect Your Home</a></li>
+            <li><a href="#embers">Embers Burn Homes</a></li>
+            <li><a href="#process">Assess, Harden, Protect</a></li>
+            <li><a href="#app">The AquaPulse360 App</a></li>
+            <li><a href="#proof">Proven Performance</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Footer, services and resources">
+          <h3 class="sub">Services</h3>
+          <ul>
+            <li><a href="#assessment">No Cost Wildfire Inspection</a></li>
+            <li><a href="#who">Condo and Commercial</a></li>
+            <li><a href="#who">Critical Infrastructure</a></li>
+            <li><a href="#insurance">Financing Available</a></li>
+            <li><a href="#risk-map">Wildfire Danger Map</a></li>
+            <li><a href="https://wildfireprepared.org/wp-content/uploads/WPH-How-To-Prepare-My-Home-Checklist.pdf" target="_blank" rel="noopener">Home preparation checklist (PDF)<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            <li><a href="https://drive.google.com/file/d/1eI12r2C-FwOYFESqznsFG0HYCEzwdpTi/view?usp=sharing" target="_blank" rel="noopener">Colorado insurance underwriting act<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+          </ul>
+        </nav>
+        <div class="footer-contact">
+          <h3 class="sub">Contact</h3>
+          <strong>Sales inquiries</strong>
+          <a href="tel:+19707103777"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>(970) 710-3777</a>
+          <strong>Email</strong>
+          <a href="mailto:sales@defensedelivered.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>sales@defensedelivered.com</a>
+          <strong>Follow</strong>
+          <a href="https://www.facebook.com/profile.php?id=61581990534252" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg>Defense Delivered on Facebook<span class="visually-hidden"> (opens in a new tab)</span></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="margin:0">&copy; 2026 Defense Delivered. All rights reserved. AquaPulse360 is a trademark of Defense Delivered.</p>
+        <ul>
+          <li><a href="#top">Accessibility</a></li>
+          <li><a href="#top">Privacy policy</a></li>
+          <li><button type="button" id="cookie-settings">Cookie settings</button></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= COOKIE CONSENT ================= -->
+  <div class="cookie" id="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-desc" hidden>
+    <h2 id="cookie-title">Cookies on this site</h2>
+    <p id="cookie-desc">We use essential cookies to make this site work. With your permission we also use analytics cookies to understand which pages help homeowners most. You can change your choice at any time from the footer.</p>
+    <div class="btn-row">
+      <button class="btn btn-primary" type="button" data-consent="all">Accept all</button>
+      <button class="btn btn-outline" type="button" data-consent="essential">Essential only</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* Header shadow on scroll */
+      var header = document.querySelector('.site-header');
+      function onScroll() { header.classList.toggle('is-scrolled', window.scrollY > 8); }
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      /* Mobile navigation */
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+      var navLabel = toggle.querySelector('.nav-toggle-label');
+      function setNav(open) {
+        nav.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        navLabel.textContent = open ? 'Close' : 'Menu';
+        document.body.classList.toggle('nav-open', open);
+        if (open) { var first = nav.querySelector('a'); if (first) first.focus(); }
+      }
+      toggle.addEventListener('click', function () { setNav(!nav.classList.contains('is-open')); });
+      nav.addEventListener('click', function (e) { if (e.target.closest('a')) setNav(false); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('is-open')) { setNav(false); toggle.focus(); }
+      });
+      var desktop = window.matchMedia('(min-width: 1280px)');
+      if (desktop.addEventListener) desktop.addEventListener('change', function () { if (desktop.matches) setNav(false); });
+
+      /* Hero background video: respects reduced motion and data saver, offers pause control */
+      var video = document.getElementById('hero-video');
+      var ctl = document.getElementById('hero-video-toggle');
+      var ctlLabel = ctl.querySelector('.ctl-label');
+      var iPlay = ctl.querySelector('.i-play');
+      var iPause = ctl.querySelector('.i-pause');
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var saveData = navigator.connection && navigator.connection.saveData;
+      var userPaused = false;
+
+      function loadHero() {
+        if (video.dataset.loaded) return;
+        video.src = window.innerWidth >= 1024 ? video.dataset.srcLarge : video.dataset.srcSmall;
+        video.dataset.loaded = '1';
+      }
+      function updateCtl() {
+        var paused = video.paused;
+        ctlLabel.textContent = paused ? 'Play video' : 'Pause video';
+        ctl.setAttribute('aria-label', paused ? 'Play background video' : 'Pause background video');
+        iPlay.style.display = paused ? '' : 'none';
+        iPause.style.display = paused ? 'none' : '';
+      }
+      function playHero() { loadHero(); var p = video.play(); if (p && p.catch) p.catch(function () { updateCtl(); }); }
+      if (!reduceMotion && !saveData) { playHero(); }
+      ctl.addEventListener('click', function () {
+        if (video.paused) { userPaused = false; playHero(); }
+        else { userPaused = true; video.pause(); }
+      });
+      video.addEventListener('play', updateCtl);
+      video.addEventListener('pause', updateCtl);
+      updateCtl();
+
+      if ('IntersectionObserver' in window) {
+        var hero = document.getElementById('top');
+        new IntersectionObserver(function (entries) {
+          if (document.hidden) return;
+          entries.forEach(function (entry) {
+            if (!video.dataset.loaded) return;
+            if (entry.isIntersecting) { if (!userPaused && video.paused) { var p = video.play(); if (p && p.catch) p.catch(function () {}); } }
+            else if (!video.paused) { video.pause(); }
+          });
+        }, { threshold: 0.05 }).observe(hero);
+      }
+      document.addEventListener('visibilitychange', function () {
+        if (!document.hidden && video.dataset.loaded && !userPaused && video.paused) {
+          var p = video.play(); if (p && p.catch) p.catch(function () {});
+        }
+      });
+
+      /* Assessment form (mockup: validates and shows the confirmation) */
+      var form = document.getElementById('assessment-form');
+      var status = document.getElementById('form-status');
+      var success = document.getElementById('form-success');
+      var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      function validateField(field) {
+        var err = document.getElementById(field.id + '-error');
+        var value = field.value.trim();
+        var msg = '';
+        if (!value) msg = field.getAttribute('data-required-msg') || 'This field is required.';
+        else if (field.type === 'email' && !emailRe.test(value)) msg = 'Enter an email address in the format name@example.com.';
+        field.setAttribute('aria-invalid', msg ? 'true' : 'false');
+        if (msg) field.setAttribute('aria-describedby', err.id); else field.removeAttribute('aria-describedby');
+        err.textContent = msg;
+        return !msg;
+      }
+      form.querySelectorAll('[data-required]').forEach(function (field) {
+        field.addEventListener('blur', function () { if (field.getAttribute('aria-invalid') === 'true') validateField(field); });
+        field.addEventListener('input', function () { if (field.getAttribute('aria-invalid') === 'true') validateField(field); });
+      });
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var firstBad = null;
+        var bad = 0;
+        form.querySelectorAll('[data-required]').forEach(function (field) {
+          if (!validateField(field)) { bad++; if (!firstBad) firstBad = field; }
+        });
+        if (firstBad) {
+          status.textContent = bad === 1 ? 'One field needs attention before we can send your request.' : bad + ' fields need attention before we can send your request.';
+          firstBad.focus();
+          return;
+        }
+        status.textContent = '';
+        form.hidden = true;
+        success.hidden = false;
+        success.focus();
+      });
+
+      /* Cookie consent */
+      var banner = document.getElementById('cookie-banner');
+      var KEY = 'dd-cookie-consent';
+      var stored = null;
+      try { stored = window.localStorage.getItem(KEY); } catch (err) { stored = null; }
+      function showBanner() { banner.hidden = false; }
+      function closeBanner(choice) {
+        try { window.localStorage.setItem(KEY, choice); } catch (err) { /* storage unavailable */ }
+        banner.hidden = true;
+      }
+      if (!stored) { window.setTimeout(showBanner, 1200); }
+      banner.querySelector('[data-consent="all"]').addEventListener('click', function () { closeBanner('all'); });
+      banner.querySelector('[data-consent="essential"]').addEventListener('click', function () { closeBanner('essential'); });
+      banner.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeBanner('essential'); });
+      document.getElementById('cookie-settings').addEventListener('click', function () {
+        showBanner();
+        banner.querySelector('button').focus();
+      });
+    })();
+  </script>
+</body>
+</html>
